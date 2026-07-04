@@ -11,7 +11,12 @@ export default function SpinBadge() {
       >
         <circle cx="50" cy="50" r="46" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6 8" />
       </svg>
-      <span className="pointer-events-none absolute inset-0 flex items-center justify-center font-mono-tag text-[9px] font-medium tracking-widest text-paper">
+      {/* Solid backing chip so the label never sits directly on a busy photo. */}
+      <span className="pointer-events-none absolute inset-0 m-auto h-9 w-9 rounded-full bg-black/60" />
+      <span
+        className="font-mono-tag pointer-events-none absolute inset-0 flex items-center justify-center text-xs font-semibold tracking-wide text-white"
+        style={{ textShadow: '0 1px 3px rgba(0,0,0,0.9), 0 0 6px rgba(0,0,0,0.7)' }}
+      >
         VIEW
       </span>
     </div>
