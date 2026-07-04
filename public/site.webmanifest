@@ -1,0 +1,8 @@
+{
+  "name": "iDream Egypt",
+  "short_name": "iDream",
+  "icons": [{ "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }],
+  "theme_color": "#020408",
+  "background_color": "#020408",
+  "display": "standalone"
+}
