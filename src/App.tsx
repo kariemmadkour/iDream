@@ -10,6 +10,7 @@ import UnitConverter from './pages/tools/UnitConverter'
 import JsonToolkit from './pages/tools/JsonToolkit'
 import HashGenerator from './pages/tools/HashGenerator'
 import CvMaker from './pages/tools/CvMaker'
+import Monolith from './pages/Monolith'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/tools/json-toolkit" element={<JsonToolkit />} />
           <Route path="/tools/hash-generator" element={<HashGenerator />} />
           <Route path="/tools/cv-maker" element={<CvMaker />} />
+          <Route path="/monolith" element={<Monolith />} />
         </Routes>
       </main>
       <Footer />
