@@ -79,3 +79,20 @@ body {
 .animate-marquee {
   animation: marquee 28s linear infinite;
 }
+
+@keyframes spin-badge {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-badge-ring {
+  animation: spin-badge 8s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-badge-ring {
+    animation: none;
+  }
+}
