@@ -1,5 +1,6 @@
 import Hero from '../components/Hero'
 import Marquee from '../components/Marquee'
+import ServicesPanels from '../components/ServicesPanels'
 import ToolsList from '../components/ToolsList'
 import Reveal from '../components/Reveal'
 
@@ -8,12 +9,16 @@ export default function Home() {
     <>
       <Hero />
       <Marquee />
+      <ServicesPanels />
       <section className="px-6 py-24 md:px-10">
         <Reveal>
           <p className="max-w-3xl text-2xl leading-snug text-paper/90 md:text-4xl">
-            iDream Egypt builds small, sharp tools that respect your data. No sign-ups, no
-            servers reading your passwords, no ads deciding what you see —{' '}
-            <span className="text-mist">just fast utilities that run entirely in your browser.</span>
+            iDream Egypt is a small creative-technology studio — AI video, custom software,
+            event production, and generative content —{' '}
+            <span className="text-mist">
+              plus a growing set of free browser tools we build and give back, no sign-up, no ads,
+              nothing ever leaving your device.
+            </span>
           </p>
         </Reveal>
       </section>

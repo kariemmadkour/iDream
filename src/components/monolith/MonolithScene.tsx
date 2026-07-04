@@ -1,6 +1,8 @@
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Stars } from '@react-three/drei'
+import { EffectComposer, Bloom, Vignette, ChromaticAberration } from '@react-three/postprocessing'
+import { BlendFunction } from 'postprocessing'
 import Tower, { estimateTowerHeight } from './Tower'
 import ReflectiveFloor from './ReflectiveFloor'
 import FlyingSilhouettes from './FlyingSilhouettes'
@@ -58,6 +60,23 @@ export default function MonolithScene({
           autoRotate={!reducedMotion}
           autoRotateSpeed={0.3}
         />
+
+        <EffectComposer multisampling={0}>
+          <Bloom
+            luminanceThreshold={0.85}
+            luminanceSmoothing={0.4}
+            intensity={0.85}
+            mipmapBlur
+            radius={0.5}
+          />
+          <ChromaticAberration
+            blendFunction={BlendFunction.NORMAL}
+            offset={[0.0006, 0.0006]}
+            radialModulation={false}
+            modulationOffset={0}
+          />
+          <Vignette eskil={false} offset={0.15} darkness={0.9} />
+        </EffectComposer>
       </Canvas>
     </div>
   )
